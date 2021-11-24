@@ -1,0 +1,41 @@
+{
+  "name": "@nfte/react",
+  "version": "1.0.4",
+  "description": "A React component for rendering NFT's in your app",
+  "source": "src/index.ts",
+  "main": "dist/react.js",
+  "module": "dist/react.esm.js",
+  "types": "dist/index.d.ts",
+  "sideEffects": [
+    "*.css"
+  ],
+  "license": "MIT",
+  "author": "Sam Mason de Caires <sam.jbmason@gmail.com>",
+  "repository": "sammdec/nfte",
+  "scripts": {
+    "build": "microbundle -f es,cjs --jsx React.createElement --define API_HOST='https://nfte.app' --css inline",
+    "dev": "microbundle watch -f es,cjs --jsx React.createElement --define API_HOST='http://localhost:3000' --css inline",
+    "prepare": "yarn build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "microbundle": "^0.13.0",
+    "react": "^17.0.1"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1 || ^17.x"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "typescript",
+    "nft",
+    "ethereum",
+    "dapp",
+    "ipfs",
+    "erc-721"
+  ]
+}
